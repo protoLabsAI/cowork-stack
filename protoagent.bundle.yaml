@@ -20,7 +20,7 @@ plugins:
   - { id: artifact, builtin: true }                                                       # deliverable panel, ships with protoAgent
   - { id: notes, builtin: true }                                                          # notes surface, ships with protoAgent
   - { id: execute_code, builtin: true }                                                   # runtime the document skills drive
-  - { id: cowork, url: https://github.com/protoLabsAI/cowork-plugin, ref: v0.1.0 }
+  - { id: cowork, url: https://github.com/protoLabsAI/cowork-plugin, ref: v0.1.1 }
   - { id: claude_bridge, url: https://github.com/protoLabsAI/claude-bridge-plugin, ref: v0.1.0 }
   - { id: google, url: https://github.com/protoLabsAI/google-plugin, ref: v0.5.0 }
 
