@@ -1,0 +1,41 @@
+# cowork-stack — the bundle behind protoAgent's Cowork archetype (ADR 0083).
+# Composes the knowledge-worker agent: document skills + deliverable surfaces +
+# Google connectors + scheduling/memory habits + Claude Code state import.
+#
+# Pin rules per ADR 0049: member entries stay one-line, refs are release TAGS
+# (plugins.lock records the resolved SHA), verified_against is the core version
+# this pin set was last verified on.
+
+id: cowork-stack
+name: Cowork Stack
+description: >-
+  A knowledge-work copilot, prepackaged: office-document skills (Word, Excel,
+  PowerPoint, PDF) that produce real files, artifact + notes surfaces, Google
+  Workspace connectors, cron-grade scheduling and consolidated memory, and a
+  claude-bridge importer for your existing Claude Code/Cowork state.
+
+verified_against: 0.102.0
+
+plugins:
+  - { id: artifact, builtin: true }                                                       # deliverable panel, ships with protoAgent
+  - { id: notes, builtin: true }                                                          # notes surface, ships with protoAgent
+  - { id: execute_code, builtin: true }                                                   # runtime the document skills drive
+  - { id: cowork, url: https://github.com/protoLabsAI/cowork-plugin, ref: v0.1.0 }
+  - { id: claude_bridge, url: https://github.com/protoLabsAI/claude-bridge-plugin, ref: v0.1.0 }
+  - { id: google, url: https://github.com/protoLabsAI/google-plugin, ref: v0.5.0 }
+
+# Suggested turn-on list — applied automatically on the archetype/setup paths,
+# a suggestion on raw `plugin install` (ADR 0040).
+enabled: [artifact, notes, execute_code, cowork, claude_bridge, google]
+
+# No config defaults on purpose: folder access is consented in /setup-cowork
+# (Cowork's own opt-in folder model), Google OAuth is a console flow, and every
+# plugin's shipped defaults are already right for this composition.
+
+# Presents this bundle as a starter agent type in the new-agent picker
+# (ADR 0042). The protoAgent catalog also carries a `cowork` row pointing here —
+# the picker dedupes by bundle URL.
+archetype:
+  label: Cowork
+  icon: Briefcase
+  blurb: A knowledge-work copilot — office-document skills, Google connectors, schedules, and memory, prepackaged.
