@@ -14,7 +14,7 @@ description: >-
   Workspace connectors, cron-grade scheduling and consolidated memory, and a
   claude-bridge importer for your existing Claude Code/Cowork state.
 
-verified_against: 0.102.0
+verified_against: 0.137.2
 
 plugins:
   - { id: artifact, builtin: true }                                                       # deliverable panel, ships with protoAgent
