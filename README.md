@@ -10,7 +10,7 @@ with cron-grade scheduling, unified memory, and model choice.
 
 | Member | Ships | Why it's here |
 |---|---|---|
-| `cowork` | [cowork-plugin](https://github.com/protoLabsAI/cowork-plugin) | Document skills (docx/xlsx/pptx/pdf) + schedule/memory/writing-voice habits + `/setup-cowork` |
+| `cowork` | [cowork-plugin](https://github.com/protoLabsAI/cowork-plugin) | Document skills (docx/xlsx/pptx/pdf) + `/daily-brief` + drop-folder watches (`cowork:folder_changed` verifier) + schedule/memory/writing-voice habits + `/setup-cowork` |
 | `claude_bridge` | [claude-bridge-plugin](https://github.com/protoLabsAI/claude-bridge-plugin) | Explore + import your existing Claude Code/Cowork state |
 | `google` | [google-plugin](https://github.com/protoLabsAI/google-plugin) | Gmail / Calendar / Drive — the connector layer |
 | `artifact` | builtin | The deliverable surface |
