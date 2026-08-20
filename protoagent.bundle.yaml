@@ -1,4 +1,4 @@
-# cowork-stack — the bundle behind protoAgent's Cowork archetype (ADR 0083).
+# cowork-archetype — the bundle behind protoAgent's Cowork archetype (ADR 0083).
 # Composes the knowledge-worker agent: document skills + deliverable surfaces +
 # Google connectors + scheduling/memory habits + Claude Code state import.
 #
@@ -6,8 +6,8 @@
 # (plugins.lock records the resolved SHA), verified_against is the core version
 # this pin set was last verified on.
 
-id: cowork-stack
-name: Cowork Stack
+id: cowork-archetype
+name: Cowork
 description: >-
   A knowledge-work copilot, prepackaged: office-document skills (Word, Excel,
   PowerPoint, PDF) that produce real files, artifact + notes surfaces, Google
@@ -31,7 +31,7 @@ enabled: [artifact, notes, execute_code, cowork, claude_bridge, google]
 # Config defaults are deliberately minimal: folder access is consented in
 # /setup-cowork (Cowork's own opt-in folder model), Google OAuth is a console
 # flow, and the plugins' shipped defaults are right for this composition. The
-# ONE exception: this stack ships enough skills that core's skills_top_k=5
+# ONE exception: this archetype ships enough skills that core's skills_top_k=5
 # MRU index hides the pack's headline behaviors on a FRESH instance — the
 # first live eval run watched a brand-new agent freestyle a chat brief
 # because `daily-brief` never made the 5-row index (protoAgent#2867). Size

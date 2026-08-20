@@ -1,4 +1,4 @@
-# cowork-stack
+# cowork-archetype
 
 The plugin bundle behind [protoAgent](https://github.com/protoLabsAI/protoAgent)'s
 **Cowork archetype** (ADR 0083) — pick "Cowork" in the setup wizard or
@@ -26,7 +26,7 @@ is a console flow.
 Pick **Cowork** in the protoAgent setup wizard / new-agent picker, or:
 
 ```
-python -m server plugin install https://github.com/protoLabsAI/cowork-stack
+python -m server plugin install https://github.com/protoLabsAI/cowork-archetype
 ```
 
 After install: enable the suggested list, run install-deps for the document
